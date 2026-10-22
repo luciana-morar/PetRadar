@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const http = require('http');
 const { Server } = require("socket.io");
+const fs = require('fs'); // <-- Adaugat
 
 const app = express();
 app.use(cors());
@@ -9,18 +10,17 @@ app.use(express.json());
 
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: {
-        origin: "http://localhost:8100",
-        methods: ["GET", "POST"],
-        credentials: true
-    }
+    cors: { origin: "http://localhost:8100", methods: ["GET", "POST"], credentials: true }
 });
 
-let pets = [
-    { id: 1, name: "Max", species: "Câine", status: "pierdut", location: "Cluj-Napoca", description: "Labrador, foarte prietenos." },
-    { id: 2, name: "Luna", species: "Pisică", status: "găsit", location: "Florești", description: "Pisică neagră, fără zgârzi." },
-    { id: 3, name: "Rex", species: "Câine", status: "pierdut", location: "Mănăștur", description: "Ciobănesc german, are zgârdan roșu." }
-];
+let pets = [];
+const FILE = './pets.json';
+
+pets = JSON.parse(fs.readFileSync(FILE, 'utf8'));
+
+function save() {
+    fs.writeFileSync(FILE, JSON.stringify(pets));
+}
 
 app.get('/api/pets', (req, res) => {
     res.json(pets);
@@ -33,22 +33,31 @@ app.get('/api/pets/:id', (req, res) => {
 });
 
 app.post('/api/pets', (req, res) => {
-    const newPet = { id: pets.length + 1, ...req.body };
+    const newPet = { id: Date.now(), ...req.body }; // ID unic bazat pe timp
     pets.push(newPet);
+    save();
     io.emit('pet:created', newPet);
     res.status(201).json(newPet);
 });
 
-//websocket conexiune
-io.on('connection', (socket) => {
-    console.log('Un client s-a conectat prin WebSocket:', socket.id);
+app.put('/api/pets/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const index = pets.findIndex(p => p.id === id);
+    if (index !== -1) {
+        pets[index] = { ...pets[index], ...req.body };
+        save();
+        io.emit('pet:updated', pets[index]);
+        res.json(pets[index]);
+    } else {
+        res.status(404).json({ error: 'Not found' });
+    }
+});
 
-    socket.on('disconnect', () => {
-        console.log('Client deconectat:', socket.id);
-    });
+io.on('connection', (socket) => {
+    console.log('Client conectat');
 });
 
 const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server pe http://localhost:${PORT}`);
 });

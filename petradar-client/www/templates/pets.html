@@ -1,13 +1,20 @@
-<ion-view view-title="PetRadar - Alerte">
+<ion-view view-title="Alerte Animale">
   <ion-content>
-    <ion-list>
-      <ion-item
-        ng-repeat="pet in pets"
-        href="#"
-        ui-sref="pet-detail({id: pet.id})">
 
-        <h2>{{pet.name}} ({{pet.species}})</h2>
-        <p>Status: <strong>{{pet.status}}</strong> | Locație: {{pet.location}}</p>
+    <div class="padding">
+      <button class="button button-block button-outline button-dark" ui-sref="pet-form({id: 'new'})">
+        + Adaugă o alertă nouă
+      </button>
+    </div>
+
+    <ion-list>
+      <ion-item ng-repeat="pet in pets">
+
+        <div href="#" ui-sref="pet-detail({id: pet.id})">
+          <h2>{{pet.name}} ({{pet.species}})</h2>
+          <p>Status: <strong>{{pet.status}}</strong> | Locație: {{pet.location}}</p>
+        </div>
+
       </ion-item>
     </ion-list>
   </ion-content>

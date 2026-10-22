@@ -9,3 +9,5 @@ npm-debug.log*
 # Sistem de operare
 .DS_Store
 Thumbs.db
+
+pets.json

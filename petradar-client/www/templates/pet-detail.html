@@ -1,15 +1,27 @@
-<ion-view view-title="Detalii: {{pet.name}}">
+<ion-view view-title="Detalii">
   <ion-content>
     <div class="card" ng-if="pet">
       <div class="item item-divider">
-        {{pet.name}}
+        <strong>{{pet.name}}</strong>
       </div>
+
+      <div class="item item-image" ng-if="pet.photo">
+        <img ng-src="{{pet.photo}}">
+      </div>
+
       <div class="item item-text-wrap">
         <p><strong>Specie:</strong> {{pet.species}}</p>
         <p><strong>Status:</strong> {{pet.status}}</p>
         <p><strong>Ultima locație:</strong> {{pet.location}}</p>
         <p><strong>Descriere:</strong> {{pet.description}}</p>
       </div>
+    </div>
+
+    <div class="padding" ng-if="pet">
+      <button class="button button-block button-outline button-dark" ui-sref="pet-form({id: pet.id})">
+        Editează
+      </button>
+
     </div>
   </ion-content>
 </ion-view>

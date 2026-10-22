@@ -1,0 +1,40 @@
+<ion-view view-title="{{isEdit ? 'Editează' : 'Adaugă'}}">
+  <ion-content>
+    <div class="list padding">
+      <label class="item item-input">
+        <span class="input-label">Nume</span>
+        <input type="text" ng-model="pet.name" placeholder="Ex: Max">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Specie</span>
+        <input type="text" ng-model="pet.species" placeholder="Ex: Câine">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Status</span>
+        <select ng-model="pet.status">
+          <option value="pierdut">Pierdut</option>
+          <option value="găsit">Găsit</option>
+        </select>
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Locație</span>
+        <input type="text" ng-model="pet.location" placeholder="Ex: Cluj-Napoca">
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label">Descriere</span>
+        <textarea ng-model="pet.description" placeholder="Detalii..."></textarea>
+      </label>
+
+      <button class="button button-block button-dark margin-top" ng-click="save()">
+        Salvează
+      </button>
+      <button class="button button-block button-light" ui-sref="pets">
+        Anulează
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

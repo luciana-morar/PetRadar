@@ -24,6 +24,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         url: '/pets/:id',
         templateUrl: 'templates/pet-detail.html',
         controller: 'PetDetailCtrl'
+      })
+
+      .state('pet-form', {
+        url: '/pet-form/:id',
+        templateUrl: 'templates/pet-form.html',
+        controller: 'PetFormCtrl'
       });
 
     $urlRouterProvider.otherwise('/pets');
