@@ -1,0 +1,15 @@
+<ion-view view-title="Detalii: {{pet.name}}">
+  <ion-content>
+    <div class="card" ng-if="pet">
+      <div class="item item-divider">
+        {{pet.name}}
+      </div>
+      <div class="item item-text-wrap">
+        <p><strong>Specie:</strong> {{pet.species}}</p>
+        <p><strong>Status:</strong> {{pet.status}}</p>
+        <p><strong>Ultima locație:</strong> {{pet.location}}</p>
+        <p><strong>Descriere:</strong> {{pet.description}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
