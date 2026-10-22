@@ -1,0 +1,11 @@
+# Dependinte Node
+/node_modules/
+npm-debug.log*
+
+# IDE / Editor
+.idea/
+.vscode/
+
+# Sistem de operare
+.DS_Store
+Thumbs.db
