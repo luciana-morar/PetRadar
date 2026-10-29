@@ -19,7 +19,7 @@ const FILE = './pets.json';
 pets = JSON.parse(fs.readFileSync(FILE, 'utf8'));
 
 function save() {
-    fs.writeFileSync(FILE, JSON.stringify(pets));
+    fs.writeFileSync(FILE, JSON.stringify(pets, null, 2));
 }
 
 app.get('/api/pets', (req, res) => {

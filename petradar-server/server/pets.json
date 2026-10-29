@@ -1,1 +1,36 @@
-[{"id":1,"name":"Max","species":"Câine","status":"găsit","location":"Cluj-Napoca","description":"Labrador, foarte prietenos."},{"id":2,"name":"Rex","species":"Câine","status":"pierdut","location":"Mănăștur","description":"Ciobănesc german, are zgarda roșie."},{"id":1792670303339,"name":"Bob","species":"Caine","status":"pierdut","location":"Cluj","description":"Ciobanesc german fara zgarda."}]
+[
+  {
+    "id": 1,
+    "name": "Max",
+    "species": "Câine",
+    "status": "pierdut",
+    "location": "Cluj-Napoca",
+    "description": "Labrador, foarte prietenos.",
+    "photo": "https://placedog.net/500/280?id=1"
+  },
+  {
+    "id": 2,
+    "name": "Rex",
+    "species": "Câine",
+    "status": "pierdut",
+    "location": "Mănăștur",
+    "description": "Ciobănesc german, are zgârdan roșu.",
+    "photo": "https://placedog.net/500/280?id=2"
+  },
+  {
+    "id": 1792670875325,
+    "name": "Bob",
+    "species": "Caine",
+    "status": "găsit",
+    "location": "Cluj",
+    "description": "Ciobanesc german cu zgarda."
+  },
+  {
+    "id": 1792671145769,
+    "name": "Pufi",
+    "species": "Caine",
+    "status": "pierdut",
+    "location": "Cluj",
+    "description": "Ciobanesc german"
+  }
+]
