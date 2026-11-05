@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "name": "Max",
+    "species": "Câine",
+    "status": "pierdut",
+    "location": "Cluj-Napoca",
+    "description": "Labrador, foarte prietenos.",
+    "photo": "https://placedog.net/500/280?id=1",
+    "userId": 1
+  },
+  {
+    "id": 2,
+    "name": "Rex",
+    "species": "Câine",
+    "status": "pierdut",
+    "location": "Mănăștur",
+    "description": "Ciobănesc german, are zgârdan roșu.",
+    "photo": "https://placedog.net/500/280?id=2",
+    "userId": 1
+  },
+  {
+    "id": 1792670875325,
+    "name": "Bob",
+    "species": "Câine",
+    "status": "găsit",
+    "location": "Cluj",
+    "description": "Ciobănesc german cu zgarda.",
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "a1",
+    "id": 1793800638445,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "a2",
+    "id": 1793800655676,
+    "userId": 1,
+    "species": "caine"
+  },
+  {
+    "status": "pierdut",
+    "name": "ionel",
+    "species": "caine",
+    "location": "alba iulia",
+    "id": 1793868023294,
+    "userId": 2,
+    "description": "caine de talie mica"
+  },
+  {
+    "status": "pierdut",
+    "name": "andrei",
+    "species": "caine",
+    "id": 1793870562744,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "mimi",
+    "species": "pisica",
+    "id": 1793870576617,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "mia",
+    "species": "pisica",
+    "location": "cluj",
+    "id": 1793870617696,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "muni",
+    "species": "iepure",
+    "location": "cluj",
+    "id": 1793870759519,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "oti",
+    "species": "caine",
+    "id": 1793871106196,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "ion",
+    "species": "pisica",
+    "id": 1793871351300,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "ion",
+    "species": "pisica",
+    "id": 1793871351310,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "oti",
+    "id": 1793871837131,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "miti",
+    "species": "pisica",
+    "id": 1793871854132,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "mitu",
+    "species": "pisica",
+    "id": 1793871872549,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "pisi",
+    "species": "pisica",
+    "id": 1793871896894,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "andi",
+    "species": "caine",
+    "id": 1793872393294,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "pufoasa",
+    "species": "pisica",
+    "id": 1793872406397,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "ami",
+    "species": "caine",
+    "location": "cluj",
+    "id": 1793872418498,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "ionel",
+    "species": "iepuras",
+    "location": "cluj",
+    "id": 1793872430279,
+    "userId": 1
+  },
+  {
+    "status": "pierdut",
+    "name": "gigi",
+    "species": "iepure",
+    "id": 1793872440909,
+    "userId": 1
+  }
+]
