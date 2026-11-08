@@ -1,19 +1,25 @@
-<ion-view view-title="Detalii">
+<ion-view view-title="Detalii" cache-view="false">
   <ion-content>
+    <div class="padding" ng-if="notFound">
+      <p>Alerta nu mai există.</p>
+      <button class="button button-block button-light" ui-sref="pets">Înapoi la listă</button>
+    </div>
+
     <div class="card" ng-if="pet">
       <div class="item item-divider">
-        <strong>{{pet.name}}</strong>
+        <strong>{{ pet.name }}</strong>
+        <span class="pending-tag" ng-if="pet._pending">nesincronizat</span>
       </div>
 
       <div class="item item-image" ng-if="pet.photo">
-        <img ng-src="{{pet.photo}}">
+        <img ng-src="{{ pet.photo }}">
       </div>
 
       <div class="item item-text-wrap">
-        <p><strong>Specie:</strong> {{pet.species}}</p>
-        <p><strong>Status:</strong> {{pet.status}}</p>
-        <p><strong>Ultima locație:</strong> {{pet.location}}</p>
-        <p><strong>Descriere:</strong> {{pet.description}}</p>
+        <p><strong>Specie:</strong> {{ pet.species }}</p>
+        <p><strong>Status:</strong> {{ pet.status }}</p>
+        <p><strong>Ultima locație:</strong> {{ pet.location }}</p>
+        <p><strong>Descriere:</strong> {{ pet.description }}</p>
       </div>
     </div>
 
@@ -21,7 +27,10 @@
       <button class="button button-block button-outline button-dark" ui-sref="pet-form({id: pet.id})">
         Editează
       </button>
-
+      <button class="button button-block button-outline button-assertive" ng-click="remove()"
+              ng-if="!pet._pending">
+        Șterge
+      </button>
     </div>
   </ion-content>
 </ion-view>

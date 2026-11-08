@@ -1,4 +1,4 @@
-<ion-view view-title="{{isEdit ? 'Editează' : 'Adaugă'}}">
+<ion-view view-title="{{isEdit ? 'Editează' : 'Adaugă'}}" cache-view="false">
   <ion-content>
     <div class="list padding">
       <label class="item item-input">
@@ -29,10 +29,11 @@
         <textarea ng-model="pet.description" placeholder="Detalii..."></textarea>
       </label>
 
-      <button class="button button-block button-dark margin-top" ng-click="save()">
+      <button class="button button-block button-dark margin-top" ng-click="save()"
+              ng-disabled="saving || !pet.name">
         Salvează
       </button>
-      <button class="button button-block button-light" ui-sref="pets">
+      <button class="button button-block button-light" ng-click="leave()">
         Anulează
       </button>
     </div>

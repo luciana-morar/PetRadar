@@ -20,14 +20,20 @@
   <script src="js/controllers.js"></script>
   <script src="js/services.js"></script>
 
- </head>
+</head>
 
-<body ng-app="starter">
+<body ng-app="starter" ng-controller="AppCtrl">
 <ion-nav-bar class="bar-light">
   <ion-nav-back-button></ion-nav-back-button>
 </ion-nav-bar>
 
 <ion-nav-view></ion-nav-view>
+
+<!-- Banda de stare: online / offline + modificari netrimise -->
+<div class="net-banner" ng-class="net.online ? 'net-online' : 'net-offline'">
+  <span>{{ net.online ? 'Online' : 'Offline' }}</span>
+  <span ng-if="pendingCount > 0"> · {{ pendingCount }} modificări netrimise la server</span>
+</div>
 </body>
 
 </html>

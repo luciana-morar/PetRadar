@@ -1,1 +1,32 @@
-/* Empty. Add your own CSS if you like */
+/* Banda de stare (online / offline) */
+.net-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  padding: 6px 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+.net-online { background: #33cd5f; }
+.net-offline { background: #ef473a; }
+
+/* loc pentru banda, ca sa nu acopere ultimul element din lista */
+.scroll { padding-bottom: 36px; }
+
+.pending-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 8px;
+  font-size: 11px;
+  background: #ffc900;
+  color: #444;
+}
+
+.filter-bar { padding: 8px; background: #f8f8f8; }
+.filter-bar .item-input-inset { padding: 0; }
+.error-text { color: #ef473a; text-align: center; }
+.margin-top { margin-top: 12px; }/* Empty. Add your own CSS if you like */
