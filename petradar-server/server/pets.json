@@ -105,14 +105,8 @@
     "status": "pierdut",
     "name": "oti",
     "id": 1793871837131,
-    "userId": 1
-  },
-  {
-    "status": "pierdut",
-    "name": "miti",
-    "species": "pisica",
-    "id": 1793871854132,
-    "userId": 1
+    "userId": 1,
+    "species": "cal"
   },
   {
     "status": "pierdut",
@@ -140,7 +134,8 @@
     "name": "pufoasa",
     "species": "pisica",
     "id": 1793872406397,
-    "userId": 1
+    "userId": 1,
+    "location": "cluj"
   },
   {
     "status": "pierdut",
@@ -160,9 +155,10 @@
   },
   {
     "status": "pierdut",
-    "name": "gigi",
-    "species": "iepure",
-    "id": 1793872440909,
+    "name": "bibi",
+    "species": "pisica",
+    "location": "cluj",
+    "id": 1793880796762,
     "userId": 1
   }
 ]
